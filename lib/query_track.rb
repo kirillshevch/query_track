@@ -1,4 +1,4 @@
-require "query_track/version"
+require 'query_track/version'
 
 module QueryTrack
   class Error < StandardError; end
