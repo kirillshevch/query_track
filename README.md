@@ -37,6 +37,8 @@ QueryTrack::Settings.configure do |config|
 end
 ```
 
+# <img src='https://github.com/kirillshevch/query_track/blob/master/slack.jpg' alt='Incoming Hook Example' />
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/kirillshevch/query_track.
