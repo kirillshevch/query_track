@@ -1,6 +1,9 @@
 # QueryTrack
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/query_track`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![Gem Version](https://badge.fury.io/rb/query_track.svg)](https://badge.fury.io/rb/query_track)
+[![CircleCI](https://circleci.com/gh/kirillshevch/query_track.svg?style=svg)](https://circleci.com/gh/kirillshevch/query_track)
+
+Tool for finding time-consuming database queries for ActiveRecord-based Rails Apps. Provides Slack notifications for with backtrace, raw SQL, time duration, etc.
 
 ## Installation
 
@@ -20,11 +23,24 @@ Or install it yourself as:
 
 ## Usage
 
-## Development
+Specify SQL duration query limit:
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+```ruby
+QueryTrack::Settings.configure do |config|
+  config.duration = 0.5
+end
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To receive notifications about slow queries into Slack, you need to install (incoming-webhooks)[https://reflow-files.slack.com/apps/A0F7XDUAZ-incoming-webhooks] and put link into config file:
+
+```ruby
+QueryTrack::Settings.configure do |config|
+  config.duration = 0.5
+  config.notifications.slack = 'https://hooks.slack.com/services/TC30EGPDJ/BL2BH3J8H/Cgzub9lmGlOI89GxExBM7EV'
+end
+```
+
+# <img src='https://github.com/kirillshevch/query_track/blob/master/slack.jpg' alt='Incoming Hook Example' />
 
 ## Contributing
 
