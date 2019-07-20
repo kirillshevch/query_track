@@ -31,7 +31,7 @@ QueryTrack::Settings.configure do |config|
 end
 ```
 
-To receive notifications about slow queries into Slack, you need to install (incoming-webhooks)[https://reflow-files.slack.com/apps/A0F7XDUAZ-incoming-webhooks] and put link into config file:
+To receive notifications about slow queries into Slack, you need to install [incoming-webhooks](https://reflow-files.slack.com/apps/A0F7XDUAZ-incoming-webhooks) and put link into config file:
 
 ```ruby
 QueryTrack::Settings.configure do |config|
