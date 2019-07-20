@@ -36,7 +36,7 @@ To receive notifications about slow queries into Slack, you need to install [inc
 ```ruby
 QueryTrack::Settings.configure do |config|
   config.duration = 0.5
-  config.notifications.slack = 'https://hooks.slack.com/services/TC30EGPDJ/BL2BH3J8H/Cgzub9lmGlOI89GxExBM7EV'
+  config.notifications.slack = 'https://hooks.slack.com/services/T0000000/B0000000/C0000000'
 end
 ```
 
