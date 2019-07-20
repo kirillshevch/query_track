@@ -1,6 +1,7 @@
 RSpec.describe QueryTrack::Notifications::Slack do
   let(:code) { 'COMMIT' }
   let(:duration) { 5 }
+  let(:slack_stub) { double }
 
   before do
     QueryTrack::Settings.configure do |config|
@@ -9,5 +10,11 @@ RSpec.describe QueryTrack::Notifications::Slack do
     end
   end
 
-  pending 'it should post notification to slack'
+  subject { described_class.new(code, duration) }
+
+  it 'should post notification to slack' do
+    allow(SlackHook::Incoming).to receive(:new).and_return(slack_stub)
+    expect(slack_stub).to receive(:post)
+    subject.call
+  end
 end
