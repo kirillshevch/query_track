@@ -1,5 +1,8 @@
 # QueryTrack
 
+[![Gem Version](https://badge.fury.io/rb/query_track.svg)](https://badge.fury.io/rb/query_track)
+[![CircleCI](https://circleci.com/gh/kirillshevch/query_track.svg?style=svg)](https://circleci.com/gh/kirillshevch/query_track)
+
 Tool for finding time-consuming database queries for ActiveRecord-based Rails Apps. Provides Slack notifications for with backtrace, raw SQL, time duration, etc.
 
 ## Installation
@@ -20,7 +23,7 @@ Or install it yourself as:
 
 ## Usage
 
-Specify SQL duration query limit
+Specify SQL duration query limit:
 
 ```ruby
 QueryTrack::Settings.configure do |config|
