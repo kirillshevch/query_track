@@ -1,4 +1,3 @@
-require 'pry'
 require 'dry-configurable'
 require 'active_support/notifications'
 require 'slack_hook'

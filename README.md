@@ -20,6 +20,22 @@ Or install it yourself as:
 
 ## Usage
 
+Specify SQL duration query limit
+
+```ruby
+QueryTrack::Settings.configure do |config|
+  config.duration = 0.5
+end
+```
+
+To receive notifications about slow queries into Slack, you need to install (incoming-webhooks)[https://reflow-files.slack.com/apps/A0F7XDUAZ-incoming-webhooks] and put link into config file:
+
+```ruby
+QueryTrack::Settings.configure do |config|
+  config.duration = 0.5
+  config.notifications.slack = 'https://hooks.slack.com/services/TC30EGPDJ/BL2BH3J8H/Cgzub9lmGlOI89GxExBM7EV'
+end
+```
 
 ## Contributing
 
