@@ -10,9 +10,11 @@ module QueryTrack
       end
 
       def call
+        return if webhook_url.nil? || webhook_url.empty?
+
         slack_hook = SlackHook::Incoming.new(webhook_url)
 
-        trace = caller.select { |v| v =~ %r{app/} }[0]
+        trace = QueryTrack::Trace.new(caller).call
 
         payload = { blocks: blocks(trace) }
 
