@@ -33,19 +33,6 @@ QueryTrack::Settings.configure do |config|
 end
 ```
 
-### Slack Notifications
-
-To receive notifications about slow queries into Slack, you need to install [incoming-webhooks](https://reflow-files.slack.com/apps/A0F7XDUAZ-incoming-webhooks) and put link into config file:
-
-```ruby
-QueryTrack::Settings.configure do |config|
-  config.duration = 0.5
-  config.notifications.slack = 'https://hooks.slack.com/services/T0000000/B0000000/C0000000'
-end
-```
-
-# <img src='https://github.com/kirillshevch/query_track/blob/master/examples/slack.jpg' alt='Incoming Hook Example' />
-
 ### Console Log
 
 Enable console logs from config:
@@ -58,6 +45,19 @@ end
 ```
 
 # <img src='https://github.com/kirillshevch/query_track/blob/master/examples/console.jpg' alt='Log Example' />
+
+### Slack Notifications
+
+To receive notifications about slow queries into Slack, you need to install [incoming-webhooks](https://reflow-files.slack.com/apps/A0F7XDUAZ-incoming-webhooks) and put link into config file:
+
+```ruby
+QueryTrack::Settings.configure do |config|
+  config.duration = 0.5
+  config.notifications.slack = 'https://hooks.slack.com/services/T0000000/B0000000/C0000000'
+end
+```
+
+# <img src='https://github.com/kirillshevch/query_track/blob/master/examples/slack.jpg' alt='Incoming Hook Example' />
 
 ### Filters
 
