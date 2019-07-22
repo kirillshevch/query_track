@@ -9,5 +9,7 @@ module QueryTrack
     end
 
     setting :logs, false
+
+    setting :filters, []
   end
 end

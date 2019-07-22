@@ -9,10 +9,18 @@ module QueryTrack
     def call
       return unless QueryTrack::Settings.config.duration
 
+      return if under_filter?(caller)
+
       if event.duration > QueryTrack::Settings.config.duration
         QueryTrack::Notifications::Slack.new(event.payload[:sql], event.duration).call
         QueryTrack::Notifications::Log.new(event.payload[:sql], event.duration).call
       end
+    end
+
+    private
+
+    def under_filter?(trace)
+      QueryTrack::Filters.new(caller).call
     end
   end
 end
