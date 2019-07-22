@@ -46,6 +46,18 @@ end
 
 # <img src='https://github.com/kirillshevch/query_track/blob/master/examples/console.jpg' alt='Log Example' />
 
+### Filters
+
+To avoid noisy warnings from used gems, and places where fat queries are justified, you can filters SQL by backtrace. 
+For example, you have installed `activeadmin` and want to skip everything from `app/admin`:
+
+```ruby
+QueryTrack::Settings.configure do |config|
+  config.duration = 0.5
+  config.filters = ['app/admin']
+end
+```
+
 ### Slack Notifications
 
 To receive notifications about slow queries into Slack, you need to install [incoming-webhooks](https://reflow-files.slack.com/apps/A0F7XDUAZ-incoming-webhooks) and put link into config file:
@@ -58,18 +70,6 @@ end
 ```
 
 # <img src='https://github.com/kirillshevch/query_track/blob/master/examples/slack.jpg' alt='Incoming Hook Example' />
-
-### Filters
-
-To avoid noisy warnings from used gems, and places where fat queries are justified, you can filters SQL by backtrace. 
-For example, you have installed `activeadmin` and want to skip everything from `app/admin`:
-
-```ruby
-QueryTrack::Settings.configure do |config|
-  config.duration = 0.5
-  config.filters = ['app/admin']
-end
-```
 
 ## Contributing
 
