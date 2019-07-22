@@ -67,7 +67,7 @@ For example, you have installed `activeadmin` and want to skip everything from `
 ```ruby
 QueryTrack::Settings.configure do |config|
   config.duration = 0.5
-  config.notifications.slack = ['app/admin']
+  config.filters = ['app/admin']
 end
 ```
 
