@@ -1,3 +1,7 @@
+# v0.0.4 2019-07-22
+
+Added temp solution for async slack notifications. ([kirillshevch](https://github.com/kirillshevch/query_track/pull/5))
+
 # v0.0.3 2019-07-22
 
 Added backtrace filters. ([kirillshevch](https://github.com/kirillshevch/query_track/pull/3))

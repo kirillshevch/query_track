@@ -18,7 +18,7 @@ module QueryTrack
 
         payload = { blocks: blocks(trace) }
 
-        slack_hook.post(payload)
+        Thread.new { slack_hook.post(payload) }
       end
 
       private
