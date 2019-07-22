@@ -44,11 +44,20 @@ QueryTrack::Settings.configure do |config|
 end
 ```
 
-# <img src='https://github.com/kirillshevch/query_track/blob/master/slack.jpg' alt='Incoming Hook Example' />
+# <img src='https://github.com/kirillshevch/query_track/blob/master/examples/slack.jpg' alt='Incoming Hook Example' />
 
 ### Console Log
 
-`TODO`
+Enable console logs from config:
+
+```ruby
+QueryTrack::Settings.configure do |config|
+  config.duration = 0.5
+  config.logs = true
+end
+```
+
+# <img src='https://github.com/kirillshevch/query_track/blob/master/examples/console.jpg' alt='Log Example' />
 
 ### Filters
 

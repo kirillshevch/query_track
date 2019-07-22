@@ -7,5 +7,7 @@ module QueryTrack
     setting :notifications do
       setting :slack, ''
     end
+
+    setting :logs, false
   end
 end
