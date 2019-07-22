@@ -61,7 +61,15 @@ end
 
 ### Filters
 
-`TODO`
+To avoid noisy warnings from used gems, and places where fat queries are justified, you can filters SQL by backtrace. 
+For example, you have installed `activeadmin` and want to skip everything from `app/admin`:
+
+```ruby
+QueryTrack::Settings.configure do |config|
+  config.duration = 0.5
+  config.notifications.slack = ['app/admin']
+end
+```
 
 ## Contributing
 
