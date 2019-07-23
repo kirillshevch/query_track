@@ -2,6 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/query_track.svg)](https://badge.fury.io/rb/query_track)
 [![CircleCI](https://circleci.com/gh/kirillshevch/query_track.svg?style=svg)](https://circleci.com/gh/kirillshevch/query_track)
+[![Maintainability](https://api.codeclimate.com/v1/badges/15b0a6c0a1838b216db8/maintainability)](https://codeclimate.com/github/kirillshevch/query_track/maintainability)
 
 Tool for finding time-consuming database queries for ActiveRecord-based Rails Apps. Provides Slack notifications for with backtrace, raw SQL, time duration, etc.
 
