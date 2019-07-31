@@ -1,6 +1,6 @@
 # v0.0.5 2019-07-31
 
-Use #find instead of #map .include?(false). ([kirillshevch](https://github.com/kirillshevch/query_track/pull/6))
+Use #find instead of #map .include?(false). ([kirillshevch](https://github.com/kirillshevch/query_track/pull/7))
 
 # v0.0.4 2019-07-22
 
