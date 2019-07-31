@@ -1,3 +1,7 @@
+# v0.0.4 2019-07-31
+
+Use #find instead of #map .include?(false). ([kirillshevch](https://github.com/kirillshevch/query_track/pull/6))
+
 # v0.0.4 2019-07-22
 
 Added temp solution for async slack notifications. ([kirillshevch](https://github.com/kirillshevch/query_track/pull/5))

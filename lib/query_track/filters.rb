@@ -7,9 +7,9 @@ module QueryTrack
     end
 
     def call
-      QueryTrack::Settings.config.filters.map do |filter| 
-        full_trace.select { |v| v =~ %r{#{filter}} }[0].nil? 
-      end.include?(false)
+      QueryTrack::Settings.config.filters.find do |filter| 
+        full_trace.select { |v| v =~ %r{#{filter}} }[0]
+      end
     end
   end
 end
