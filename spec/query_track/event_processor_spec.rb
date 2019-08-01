@@ -36,7 +36,7 @@ RSpec.describe QueryTrack::EventProcessor do
     end
 
     it 'should call logs if enabled' do
-      allow(event).to receive(:duration).and_return(5)
+      allow(event).to receive(:duration).and_return(5000) # value in milliseconds
       mock_logger = double('log')
       allow(mock_logger).to receive(:call)
       expect(QueryTrack::Notifications::Log).to receive(:new).and_return(mock_logger)

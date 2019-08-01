@@ -1,3 +1,7 @@
+# v0.0.7 2019-08-01
+
+fixed view of duration seconds ([kirillshevch](https://github.com/kirillshevch/query_track/pull/8))
+
 # v0.0.6 2019-08-01
 
 repush of 0.0.5
