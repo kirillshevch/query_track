@@ -26,7 +26,7 @@ Or install it yourself as:
 
 ### SQL Duration Limit
 
-Specify SQL duration query limit:
+Specify SQL duration query limit (in seconds):
 
 ```ruby
 QueryTrack::Settings.configure do |config|
