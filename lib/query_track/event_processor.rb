@@ -1,13 +1,15 @@
 module QueryTrack
   class EventProcessor
-    attr_reader :event
+    attr_reader :event, :subscriber
 
-    def initialize(event)
+    def initialize(event, subscriber)
       @event = event
+      @subscriber = subscriber
     end
 
     def call
-      return unless QueryTrack::Settings.config.duration
+      unsubscribe
+      return unless QueryTrack::Settings.config.duration && QueryTrack::Settings.config.enabled
 
       return if under_filter?(caller)
 
@@ -18,6 +20,12 @@ module QueryTrack
     end
 
     private
+
+    def unsubscribe
+      return if QueryTrack::Settings.config.enabled
+
+      ActiveSupport::Notifications.unsubscribe(subscriber)
+    end
 
     def duration_seconds
       event.duration / 1000

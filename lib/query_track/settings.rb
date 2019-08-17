@@ -11,5 +11,7 @@ module QueryTrack
     setting :logs, false
 
     setting :filters, []
+
+    setting :enabled, true
   end
 end
