@@ -11,8 +11,9 @@ RSpec.describe QueryTrack::EventProcessor do
   ] end
 
   let!(:event) { ActiveSupport::Notifications::Event.new(*payload) }
+  let(:subscriber) { double }
 
-  subject { described_class.new(event) }
+  subject { described_class.new(event, subscriber) }
 
   context 'skipping case' do
     it 'should return if duration not specified' do

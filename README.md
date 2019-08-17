@@ -59,6 +59,17 @@ QueryTrack::Settings.configure do |config|
 end
 ```
 
+### Enable/Disable toggle
+
+Enable/disable with ENV variables to turn it on/off without code push. By default *QueryTrack* is enabled. 
+
+```ruby
+QueryTrack::Settings.configure do |config|
+  config.duration = 0.5
+  config.enabled = ENV['QUERY_TRACK_ENABLED']
+end
+```
+
 ### Slack Notifications
 
 To receive notifications about slow queries into Slack, you need to install [incoming-webhooks](https://reflow-files.slack.com/apps/A0F7XDUAZ-incoming-webhooks) and put link into config file:
