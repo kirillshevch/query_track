@@ -8,19 +8,11 @@ Tool for finding time-consuming database queries for ActiveRecord-based Rails A
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's `Gemfile` and then execute `bundle install`:
 
 ```ruby
 gem 'query_track'
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install query_track
 
 ## Usage
 
