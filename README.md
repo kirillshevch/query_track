@@ -75,6 +75,19 @@ end
 
 # <img src='https://github.com/kirillshevch/query_track/blob/master/examples/slack.jpg' alt='Incoming Hook Example' />
 
+## Custom Notifications (Handlers)
+
+You can write your own handler for slow queries. Send data to any source(for e.g. to logs storage) or make notification for another source(Email, Messengers, etc.)
+
+```ruby
+QueryTrack::Settings.configure do |config|
+  config.duration = 0.5
+  config.notifications.custom_handler = -> (sql, duration, trace) {
+    # data processing...
+  }
+end
+```
+
 ## Production Usage Notes
 
 When [QueryTrack](https://github.com/kirillshevch/query_track/blob/master/lib/query_track/notifications/slack.rb#L21) send slack hooks, request is executed in separate thread. So there should be no synchronous delays.

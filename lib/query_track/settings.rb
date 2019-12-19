@@ -6,6 +6,7 @@ module QueryTrack
 
     setting :notifications do
       setting :slack, ''
+      setting :custom_handler
     end
 
     setting :logs, false
