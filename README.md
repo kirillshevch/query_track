@@ -75,6 +75,14 @@ end
 
 # <img src='https://github.com/kirillshevch/query_track/blob/master/examples/slack.jpg' alt='Incoming Hook Example' />
 
+## Production Usage Notes
+
+When [QueryTrack](https://github.com/kirillshevch/query_track/blob/master/lib/query_track/notifications/slack.rb#L21) send slack hooks, request is executed in separate thread. So there should be no synchronous delays.
+
+Subscription to SQL events and checking duration time actually take insignificant time in milliseconds.
+
+If your project is horizontally scaled, you can install `query_track` for one of the node to avoid performance degrade for whole application.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/kirillshevch/query_track.
