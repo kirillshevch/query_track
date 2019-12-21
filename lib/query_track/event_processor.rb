@@ -16,6 +16,7 @@ module QueryTrack
       if duration_seconds > QueryTrack::Settings.config.duration
         QueryTrack::Notifications::Slack.new(event.payload[:sql], duration_seconds).call
         QueryTrack::Notifications::Log.new(event.payload[:sql], duration_seconds).call
+        QueryTrack::Notifications::Custom.new(event.payload[:sql], duration_seconds).call
       end
     end
 
