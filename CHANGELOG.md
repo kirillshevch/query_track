@@ -1,3 +1,7 @@
+# v0.0.9 2019-12-21
+
+Added custom handles ([kirillshevch](https://github.com/kirillshevch/query_track/pull/29))
+
 # v0.0.8 2019-08-17
 
 Added enabled/disable config ([kirillshevch](https://github.com/kirillshevch/query_track/pull/13))
