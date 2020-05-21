@@ -1,7 +1,7 @@
 module QueryTrack
   module Notifications
     class Log
-      attr_reader :code, :duration, :webhook_url
+      attr_reader :code, :duration
 
       def initialize(code, duration)
         @code = code.strip
