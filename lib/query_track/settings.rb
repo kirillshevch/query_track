@@ -14,5 +14,7 @@ module QueryTrack
     setting :filters, []
 
     setting :enabled, true
+
+    setting :app_dir, 'app'
   end
 end
