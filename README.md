@@ -41,7 +41,7 @@ end
 
 ### Filters
 
-To avoid noisy warnings from used gems, and places where fat queries are justified, you can filters SQL by backtrace. 
+To avoid noisy warnings from used gems, and places where fat queries are justified, you can filters SQL by backtrace.
 For example, you have installed `activeadmin` and want to skip everything from `app/admin`:
 
 ```ruby
@@ -50,10 +50,22 @@ QueryTrack::Settings.configure do |config|
   config.filters = ['app/admin']
 end
 ```
+### App Directory
+
+QueryTrack finds the trace by filtering the caller by the app directory.
+By default, the app directory is set to 'app', the default for Rails apps.
+For apps that have a non-stanard app directory, this can be set with the `app_dir` config field:
+
+```ruby
+QueryTrack::Settings.configure do |config|
+  config.duration = 0.5
+  config.app_dir = 'backend'
+end
+```
 
 ### Enable/Disable toggle
 
-Enable/disable with ENV variables to turn it on/off without code push. By default *QueryTrack* is enabled. 
+Enable/disable with ENV variables to turn it on/off without code push. By default *QueryTrack* is enabled.
 
 ```ruby
 QueryTrack::Settings.configure do |config|

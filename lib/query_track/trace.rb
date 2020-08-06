@@ -7,7 +7,7 @@ module QueryTrack
     end
 
     def call
-      full_trace.select { |v| v =~ %r{app/} }[0]
+      full_trace.select { |v| v =~ %r{#{QueryTrack::Settings.config.app_dir}/} }[0]
     end
   end
 end
