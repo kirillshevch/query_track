@@ -1,3 +1,7 @@
+# v0.0.10 2020-08-07
+
+Added custom app directory ([evanboho](https://github.com/kirillshevch/query_track/pull/60))
+
 # v0.0.9 2019-12-21
 
 Added custom handles ([kirillshevch](https://github.com/kirillshevch/query_track/pull/29))
