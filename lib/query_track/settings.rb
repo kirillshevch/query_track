@@ -5,16 +5,16 @@ module QueryTrack
     setting :duration
 
     setting :notifications do
-      setting :slack, ''
+      setting :slack, default: ''
       setting :custom_handler
     end
 
-    setting :logs, false
+    setting :logs, default: false
 
-    setting :filters, []
+    setting :filters, default: []
 
-    setting :enabled, true
+    setting :enabled, default: true
 
-    setting :app_dir, 'app'
+    setting :app_dir, default: 'app'
   end
 end
