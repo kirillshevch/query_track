@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    query_track (0.0.12)
+    query_track (0.0.14)
       activesupport
       dry-configurable
       slack_hook
