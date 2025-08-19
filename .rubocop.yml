@@ -2,18 +2,18 @@ AllCops:
   DisplayCopNames:    true
   DisplayStyleGuide:  true
   StyleGuideCopsOnly: true
-  TargetRubyVersion:  2.5
+  TargetRubyVersion:  3.4
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 
-Documentation:
+Style/Documentation:
   Enabled: false
 
-FrozenStringLiteralComment:
+Style/FrozenStringLiteralComment:
   Enabled: false
 
-Style/FileName:
+Naming/FileName:
   Enabled: false
 
 Metrics/ModuleLength:

@@ -1,13 +1,13 @@
 RSpec.describe QueryTrack::EventProcessor do
   let(:payload) do ['sql.active_record', Time.now, Time.now, '1e07319',
-    {
-      sql: "SET client_min_messages TO 'warning'",
-      name: 'SCHEMA',
-      binds: [],
-      type_casted_binds: [],
-      statement_name: nil,
-      connection_id: 1
-    }
+                    {
+                      sql: "SET client_min_messages TO 'warning'",
+                      name: 'SCHEMA',
+                      binds: [],
+                      type_casted_binds: [],
+                      statement_name: nil,
+                      connection_id: 1
+                    }
   ] end
 
   let!(:event) { ActiveSupport::Notifications::Event.new(*payload) }
@@ -21,7 +21,7 @@ RSpec.describe QueryTrack::EventProcessor do
       subject.call
     end
   end
-  
+
   context 'processing' do
     before do
       QueryTrack::Settings.configure do |config|

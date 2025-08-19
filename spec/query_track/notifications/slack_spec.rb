@@ -13,7 +13,7 @@ RSpec.describe QueryTrack::Notifications::Slack do
     end
 
     it 'should post notification to slack' do
-      #allow(SlackHook::Incoming).to receive(:new).and_return(slack_stub)
+      # allow(SlackHook::Incoming).to receive(:new).and_return(slack_stub)
       expect(slack_stub).not_to receive(:post)
       subject.call
     end

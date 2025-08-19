@@ -13,11 +13,11 @@ module QueryTrack
 
       return if under_filter?(caller)
 
-      if duration_seconds > QueryTrack::Settings.config.duration
-        QueryTrack::Notifications::Slack.new(event.payload[:sql], duration_seconds).call
-        QueryTrack::Notifications::Log.new(event.payload[:sql], duration_seconds).call
-        QueryTrack::Notifications::Custom.new(event.payload[:sql], duration_seconds).call
-      end
+      return unless duration_seconds > QueryTrack::Settings.config.duration
+
+      QueryTrack::Notifications::Slack.new(event.payload[:sql], duration_seconds).call
+      QueryTrack::Notifications::Log.new(event.payload[:sql], duration_seconds).call
+      QueryTrack::Notifications::Custom.new(event.payload[:sql], duration_seconds).call
     end
 
     private
@@ -32,7 +32,7 @@ module QueryTrack
       event.duration / 1000
     end
 
-    def under_filter?(trace)
+    def under_filter?(_trace)
       QueryTrack::Filters.new(caller).call
     end
   end
