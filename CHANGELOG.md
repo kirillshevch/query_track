@@ -1,3 +1,7 @@
+# v0.0.16 2026-07-17
+
+Dependencies version bump
+
 # v0.0.10 2020-08-07
 
 Added custom app directory ([evanboho](https://github.com/kirillshevch/query_track/pull/60))
